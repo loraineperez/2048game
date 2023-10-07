@@ -54,3 +54,8 @@ jobs:
           echo "This is the current week"
           week=`date +'%W'`
           echo $week
+      - name: "Forming release tag"
+        run: |
+          echo "This is the release tag"
+          releasetag=REL_$myyear.$week.00
+          echo REL_$myyear.$week.00     
