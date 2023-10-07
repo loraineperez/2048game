@@ -1,0 +1,25 @@
+name: Main branch pipeline
+
+on:
+  push:
+    branches:
+      - main #if someone pushes to main branch, this will trigger
+  workflow_dispatch #manually run this workflow
+
+env:
+  DAY_OF_WEEK: Monday
+
+jobs:
+  greeting_job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+      - name: "Say Hello Kat it's Friday"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        env:
+          First_Name: Kat
+      - name: "Listing the files"
+        run: ls -l
+      - name: "Printing the date"
+        run: date                  
