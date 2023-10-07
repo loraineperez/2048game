@@ -1,11 +1,11 @@
 name: Main branch pipeline
 
 on:
+  workflow_dispatch #manually run this workflow
   push:
     branches:
       - main #if someone pushes to main branch, this will trigger
-  workflow_dispatch #manually run this workflow
-
+      
 env:
   DAY_OF_WEEK: Monday
 
