@@ -39,3 +39,13 @@ jobs:
         run: echo "$Greeting $First_Name. I have $Dollars Dollars!"
       - name: "Say good afternoon Kat I have 5 dollars and 50 cents"
         run: echo "$Greeting $First_Name. I have $Dollars dollars and $Cents cents!"
+  create_release_tag_job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Good morning
+    steps:
+      - name: "Print current year"
+        run: |
+          echo "This is the current year"
+          myyear=`date +'%y'`
+          echo $myyear
