@@ -16,7 +16,6 @@ env:
   Dollars: 5
   Cents: 50
   First_Name: Kat
-  Greeting: Good afternoon
 
 jobs:
   greeting_job:
