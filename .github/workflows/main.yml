@@ -49,3 +49,8 @@ jobs:
           echo "This is the current year"
           myyear=`date +'%y'`
           echo $myyear
+      - name: "Print current week"
+        run: |
+          echo "This is the current week"
+          week=`date +'%W'`
+          echo $week
