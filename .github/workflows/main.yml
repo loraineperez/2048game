@@ -28,3 +28,7 @@ jobs:
         run: ls -l
       - name: "Printing the date"
         run: date                  
+      - name: "Print working directory"
+        run: pwd
+      - name: "Find the file"
+        run: sudo find / -name "main.yml"        
