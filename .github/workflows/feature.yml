@@ -1,0 +1,42 @@
+name: Feature branch pipeline
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches:
+      - feature*
+#   pull_request:
+#     branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+      
+env:
+  DAY_OF_WEEK: Monday
+  Dollars: 5
+  Cents: 50
+  First_Name: Kat
+
+jobs:
+  greeting_job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Good morning
+    steps:
+      - name: "Say Hello Kat it's Friday"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        env:
+          First_Name: Kat
+      - name: "Listing the files"
+        run: ls -l
+      - name: "Printing the date"
+        run: date                  
+      - name: "Print working directory"
+        run: pwd
+      - name: "List hidden files"
+        run: ls -a          
+      - name: "Say good morning Kat I have 5 dollars"
+        run: echo "$Greeting $First_Name. I have $Dollars Dollars!"
+      - name: "Say good morning Kat I have 5 dollars and 50 cents"
+        run: echo "$Greeting $First_Name. I have $Dollars dollars and $Cents cents!"
