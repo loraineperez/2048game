@@ -33,6 +33,8 @@ jobs:
       - name: "Print working directory"
         run: pwd
       - name: "List hidden files"
-        run: ls -a    
+        run: ls -a
+      - name: "Display calendar"
+        run: cal            
       - name: "Say good morning Kat I have 5 dollars"
         run: echo "$Greeting $First_Name. I have $Dollars Dollars!"
