@@ -39,6 +39,22 @@ jobs:
         run: echo "$Greeting $First_Name. I have $Dollars Dollars!"
       - name: "Say good afternoon Kat I have 5 dollars and 50 cents"
         run: echo "$Greeting $First_Name. I have $Dollars dollars and $Cents cents!"
+  create_release_tag_job_preview:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Good morning
+    steps:
+      - name: "Print current year, week, release tag"
+        run: |
+          echo "This is the current year"
+          myyear=`date +'%y'`
+          echo $myyear
+          echo "This is the current week"
+          week=`date +'%W'`
+          echo $week
+          echo "This is the release tag"
+          releasetag=REL_$myyear.$week.00
+          echo REL_$myyear.$week.00
   create_release_tag_job:
     runs-on: ubuntu-latest
     env:
@@ -58,4 +74,4 @@ jobs:
         run: |
           echo "This is the release tag"
           releasetag=REL_$myyear.$week.00
-          echo REL_$myyear.$week.00     
+          echo REL_$myyear.$week.00               
