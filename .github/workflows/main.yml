@@ -14,7 +14,9 @@ on:
 env:
   DAY_OF_WEEK: Monday
   Dollars: 5
+  Cents: 50
   First_Name: Kat
+  Greeting: Good afternoon
 
 jobs:
   greeting_job:
@@ -33,8 +35,8 @@ jobs:
       - name: "Print working directory"
         run: pwd
       - name: "List hidden files"
-        run: ls -a
-      - name: "Display calendar"
-        run: cal            
+        run: ls -a          
       - name: "Say good morning Kat I have 5 dollars"
         run: echo "$Greeting $First_Name. I have $Dollars Dollars!"
+      - name: "Say good afternoon Kat I have 5 dollars and 50 cents"
+        run: echo "$Greeting $First_Name. I have $Dollars dollars and $Cents cents!"
